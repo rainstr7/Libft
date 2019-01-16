@@ -10,13 +10,14 @@ void *ft_memset(void *s, int c, size_t n)
     if (n <= 0)
         return(s);
     str = (unsigned char *)s;
-    while (str[i] != '\0')
+    while (n > i)
     {
-        if (n > i)
-        {
-            str[i] = (unsigned char)c;
+        //if (str[i] != '\0')
+        // {
+            *str = (unsigned char)c;
             i++;
-        }
+            str++;
+        // }
     }
     return (s);
 }
@@ -25,9 +26,9 @@ int main(void)
 {
     unsigned char src1[15] = "1234567890";
     unsigned char src2[15] = "1234567890";
-    memset(src1, '1', 3);
+    memset(src1, '1', 25);
     printf("src1 = %s\n", src1);
-    ft_memset(src2, '7', 3);
+    ft_memset(src2, '1', 25);
     printf("src2 = %s\n", src2);
 
 
