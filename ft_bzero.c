@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 14:48:15 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/17 17:31:40 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/17 17:35:02 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/17 17:37:08 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void				*ft_memset(void *b, int c, size_t len)
+void				bzero(void *s, size_t n)
 {
-	int				i;
 	unsigned char	*str;
+	int				i;
 
 	i = 0;
 	str = (unsigned char *)s;
-	if (n == 0)
-		return (s);
-	else
+	while (n--)
 	{
-		while (n--)
-		{
-			str[i] = (unsigned char)c;
-			i++;
-		}
+		str[i] = 0;
+		i++;
 	}
-	return (s);
 }
