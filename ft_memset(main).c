@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset(main).c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/01/17 14:48:19 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/17 15:52:30 by ihahn            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -7,17 +20,13 @@ void *ft_memset(void *s, int c, size_t n)
     unsigned char *str;
 
     i = 0;
-    if (n <= 0)
-        return(s);
     str = (unsigned char *)s;
     while (n > i)
     {
-        //if (str[i] != '\0')
-        // {
-            *str = (unsigned char)c;
-            i++;
-            str++;
-        // }
+        str[i] = (unsigned char)c;
+        i++;
+        if (str[i] == '\0')
+            return(s);
     }
     return (s);
 }
@@ -26,11 +35,9 @@ int main(void)
 {
     unsigned char src1[15] = "1234567890";
     unsigned char src2[15] = "1234567890";
-    memset(src1, '1', 25);
+    memset(src1, '1', 15);
     printf("src1 = %s\n", src1);
-    ft_memset(src2, '1', 25);
+    ft_memset(src2, '1', 15);
     printf("src2 = %s\n", src2);
-
-
     return (0);
 }
