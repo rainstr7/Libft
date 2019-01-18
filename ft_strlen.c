@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ihahn <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 15:23:10 by ihahn             #+#    #+#             */
-/*   Updated: 2018/12/21 15:23:21 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/18 16:37:39 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 size_t	ft_strlen(const char *s)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

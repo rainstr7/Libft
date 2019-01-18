@@ -3,14 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ihahn <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/21 16:06:54 by ihahn             #+#    #+#             */
-/*   Updated: 2018/12/21 16:08:56 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/18 16:34:09 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/18 16:37:21 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
+	int len;
+	int i;
 
+	len = 0;
+	i = 0;
+	len = ft_strlen(s1);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	while (s2[i] != '\0')
+	{
+		s1[len] = s2[i];
+		len++;
+		i++;
+	}
+	s1[len] = '\0';
+	return (s1);
 }

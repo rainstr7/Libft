@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/21 15:58:18 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/18 18:26:03 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/18 18:06:33 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/18 18:10:58 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dst, char *src, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while ((src[i]) && (i < len))
+	if (s == NULL)
+		return (0);
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
+		if (s[i] == (unsigned char)c)
+			return ((char *)s + i);
 		i++;
 	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (0);
 }
