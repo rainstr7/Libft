@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:05:55 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:29:52 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	i;
+	int             len;
 
-	i = 0;
-	if (n == 0)
-		return (dst);
-	else
+	if (s && f)
 	{
-		while (n--)
+		i = 0;
+		len = ft_strlen(s);
+		while (i < len)
 		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
+			f(i, &s[i]);
+			i++;
 		}
 	}
-	return (dst);
 }

@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:41:04 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:42:22 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int	i;
+	size_t	len1;
+	size_t	len2;
+	char	*str;
 
-	i = 0;
-	if (n == 0)
-		return (dst);
-	else
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	str = ft_strnew(len1 + len2 + 1);
+	if (str)
 	{
-		while (n--)
-		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
-		}
+		ft_memcpy(str, s1, len1);
+		ft_memcpy(str + len1, s2, len2);
+		str[len1 + len2] = '\0';
+		return (str);
 	}
-	return (dst);
+	return (NULL);
 }

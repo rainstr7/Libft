@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:18:50 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:29:38 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	size_t		i;
+	size_t		len;
+	char		*str;
 
-	i = 0;
-	if (n == 0)
-		return (dst);
-	else
+	if (s && f)
 	{
-		while (n--)
+		len = ft_strlen(s);
+		str = ft_memalloc(len);
+		i = 0;
+		while (i < len && s[i] && str)
 		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
+			str[i] = f(i, s[i]);
+			i++;
 		}
+		str[i] = '\0';
+		return (str);
 	}
-	return (dst);
+	return (NULL);
 }

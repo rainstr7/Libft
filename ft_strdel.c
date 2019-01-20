@@ -1,39 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 19:52:30 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:29:47 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	ft_strdel(char **as)
 {
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (dst);
-	else
-	{
-		while (n--)
-		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
-		}
-	}
-	return (dst);
+	if (as)
+		ft_memdel((void **)as);
 }

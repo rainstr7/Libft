@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:20:42 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:29:34 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int		ft_strequ(const char *s1, const char *s2)
 {
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (dst);
-	else
+	int	len1;
+	int	len2;
+    int	i;
+	
+	len1 = 0;
+	len2 = 0;
+    i = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+    else
+    {
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	if (len1 == len2)
 	{
-		while (n--)
+		while (i < len1 && s1[i] && s2[i])
 		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
+			if (s1[i] != s2[i])
+				return (0);
+			i++;
 		}
+		return (1);
 	}
-	return (dst);
+    }
+	return (0);
 }

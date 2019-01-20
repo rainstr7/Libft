@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:46:22 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+static int	ft_nbrlen(int n)
 {
 	int	i;
+	int	nb;
 
 	i = 0;
+	nb = n;
 	if (n == 0)
-		return (dst);
-	else
+		return (1);
+	while (nb)
 	{
-		while (n--)
-		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
-		}
+		nb /= 10;
+		i++;
 	}
-	return (dst);
+	return ((n < 0) ? i + 1 : i);
+}
+
+char		*ft_itoa(int n)
+{
+	int		val;
+	int		len;
+	char	*tmp;
+
+	val = n;
+	len = ft_nbrlen(n);
+	tmp = ft_strnew(len);
+	while (len--)
+	{
+		tmp[len] = (n < 0) ? (n % 10) * -1 + 48 : (n % 10) + 48;
+		n /= 10;
+	}
+	if (val < 0)
+		tmp[0] = '-';
+	return (tmp);
 }

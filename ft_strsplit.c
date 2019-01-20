@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:18 by ihahn            ###   ########.fr       */
+/*   Created: 2019/01/20 20:44:03 by ihahn             #+#    #+#             */
+/*   Updated: 2019/01/20 20:44:05 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+char		**ft_strsplit(const char *s, char c)
 {
-	int	i;
+	size_t	i;
+	size_t	d;
+	int		start;
+	int		end;
+	char	**tab;
 
+	tab = NULL;
 	i = 0;
-	if (n == 0)
-		return (dst);
-	else
+	d = 0;
+	if (s && (tab = (char **)malloc(sizeof(*tab) * (ft_strlen(s) / 2 + 2))))
 	{
-		while (n--)
+		while (s[i] != '\0')
 		{
-			if (((char *)src)[i] != (unsigned char)c)
-			{
-				((char *)dst)[i] = ((char *)src)[i];
+			while (s[i] && s[i] == c)
 				i++;
-			}
-			else
-			{
-				((char *)dst)[i] = ((char *)src)[i];
-				return (dst);
-			}
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			end = i;
+			if (end > start)
+				tab[d++] = ft_strsub(s, start, (end - start));
 		}
 	}
-	return (dst);
+	tab[d] = NULL;
+	return (tab);
 }
