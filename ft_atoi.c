@@ -6,11 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 20:36:19 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:01:00 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 21:55:23 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int		ft_atoi(const char *str)
 {

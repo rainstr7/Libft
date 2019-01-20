@@ -6,9 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 19:46:12 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/19 18:55:35 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:04:12 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int					ft_strncmp(const char *s1, const char *s2, size_t n)
 {

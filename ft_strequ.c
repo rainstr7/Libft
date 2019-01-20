@@ -6,11 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:20:42 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:29:34 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 21:59:50 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 int		ft_strequ(const char *s1, const char *s2)
 {

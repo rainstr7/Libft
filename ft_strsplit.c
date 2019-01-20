@@ -6,11 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:03 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:44:05 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:06:03 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
 char		**ft_strsplit(const char *s, char c)
 {

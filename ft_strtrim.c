@@ -6,13 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:41:51 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:42:20 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:06:43 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-char	*ft_strtrim(const char *s)
+char				*ft_strtrim(const char *s)
 {
 	size_t			i;
 	unsigned int	start;

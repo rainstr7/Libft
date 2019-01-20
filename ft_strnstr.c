@@ -6,11 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/19 17:53:37 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:05:47 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int					ft_memcmp(const void *s1, const void *s2, size_t n);
+#include "libft.h"
 
 char				*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

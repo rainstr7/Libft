@@ -6,11 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 15:58:18 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/18 18:26:03 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:04:44 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dst, char *src, size_t len)
+#include "libft.h"
+
+char				*ft_strncpy(char *dst, char *src, size_t len)
 {
 	unsigned int	i;
 

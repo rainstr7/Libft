@@ -6,9 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:17:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/19 17:21:36 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 21:56:21 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int					ft_memcmp(const void *s1, const void *s2, size_t n)
 {

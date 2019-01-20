@@ -6,9 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 18:26:23 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/18 18:27:23 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:05:55 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

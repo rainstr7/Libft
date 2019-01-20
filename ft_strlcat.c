@@ -6,9 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 17:16:21 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/18 17:22:10 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:00:32 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

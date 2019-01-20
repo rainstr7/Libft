@@ -6,11 +6,11 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:46:03 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:46:17 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 21:53:21 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int		ft_putchar(char c)
 {

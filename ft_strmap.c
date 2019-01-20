@@ -6,17 +6,17 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:07:49 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 20:18:19 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/01/20 22:01:41 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include    "libft.h"
+#include "libft.h"
 
-char	*ft_strmap(const char *s, char (*f)(char))
+char		*ft_strmap(const char *s, char (*f)(char))
 {
-	int         i;
-	int         len;
-	char		*str;
+	int		i;
+	int		len;
+	char	*str;
 
 	if (s && f)
 	{
