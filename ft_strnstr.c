@@ -6,18 +6,18 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/21 18:44:02 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/09 22:20:28 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char				*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	int		len2;
-	char	*str1;
-	char	*str2;
+	unsigned int	i;
+	unsigned int	len2;
+	char			*str1;
+	char			*str2;
 
 	i = 0;
 	str1 = (char *)haystack;
@@ -27,7 +27,7 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (str1);
 	else
 	{
-		while (((i + len2) <= len) && *str1)
+		while (((i + len2) <= len) && (*str1))
 		{
 			if (ft_memcmp(str1, str2, len2) == 0)
 				return (str1);

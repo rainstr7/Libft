@@ -6,13 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:10:00 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:58:03 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/09 21:13:09 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*str1;
 	char	*str2;

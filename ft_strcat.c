@@ -6,13 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 16:34:09 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:54:05 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/09 21:13:13 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, const char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int len;
 	int i;

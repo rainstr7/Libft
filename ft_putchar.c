@@ -6,14 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:46:03 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:53:21 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/09 22:00:28 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (0);
 }
