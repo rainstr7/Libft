@@ -6,13 +6,13 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 19:57:20 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 22:00:00 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 13:57:24 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_striter(char *s, void (*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 	int len;

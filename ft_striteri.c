@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:05:55 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/09 22:06:54 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 14:00:07 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
-	unsigned int    len;
+	unsigned int	len;
 
 	if (s && f)
 	{

@@ -6,16 +6,16 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/09 21:01:51 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 12:49:18 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int n)
+int			ft_nbrlen(int n)
 {
-	int	i;
-	int	nb;
+	int		i;
+	int		nb;
 
 	i = 0;
 	nb = n;

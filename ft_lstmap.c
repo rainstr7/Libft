@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:43:40 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/09 20:45:18 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 13:15:09 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*plst;
-	t_list	*plst2;
-	t_list	*newlist;
-	t_list	*newlist2;
+	t_list	*p_list;
+	t_list	*p_list2;
+	t_list	*new_list;
+	t_list	*new_list2;
 
-	plst = lst;
-	while (plst)
+	p_list = lst;
+	while (p_list)
 	{
-		f(plst);
-		plst = plst->next;
+		f(p_list);
+		p_list = p_list->next;
 	}
-	newlist = ft_lstnew(lst->content, lst->content_size);
-	if (newlist == NULL)
+	new_list = ft_lstnew(lst->content, lst->content_size);
+	if (new_list == NULL)
 		return (NULL);
-	plst2 = newlist;
+	p_list2 = new_list;
 	while (lst->next)
 	{
-		newlist2 = ft_lstnew((lst->next)->content, (lst->next)->content_size);
-		if (newlist2 == NULL)
+		new_list2 = ft_lstnew((lst->next)->content, (lst->next)->content_size);
+		if (new_list2 == NULL)
 			return (NULL);
-		newlist->next = newlist2;
+		new_list->next = new_list2;
 		lst = lst->next;
 	}
-	return (plst2);
+	return (p_list2);
 }

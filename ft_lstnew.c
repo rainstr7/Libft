@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:36:18 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 22:02:38 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 13:18:11 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	t_list	*newlist;
+	t_list	*new_list;
 
-	newlist = (t_list *)malloc(sizeof(t_list));
-	if (newlist == NULL)
+	new_list = (t_list *)malloc(sizeof(t_list));
+	if (new_list == NULL)
 		return (NULL);
 	if (content == NULL)
 	{
-		newlist->content = NULL;
-		newlist->content_size = 0;
+		new_list->content = NULL;
+		new_list->content_size = 0;
 	}
 	else
 	{
-		newlist->content = malloc(sizeof(content));
-		if (newlist->content == NULL)
+		new_list->content = malloc(sizeof(content));
+		if (new_list->content == NULL)
 			return (NULL);
-		ft_memcpy((newlist->content), content, sizeof(content));
-		newlist->content_size = content_size;
+		ft_memcpy((new_list->content), content, sizeof(content));
+		new_list->content_size = content_size;
 	}
-	newlist->next = NULL;
-	return (newlist);
+	new_list->next = NULL;
+	return (new_list);
 }

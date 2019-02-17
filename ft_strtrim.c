@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:41:51 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/09 22:30:47 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 14:26:04 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ char	*ft_strtrim(const char *s)
 	}
 	if (end == 0)
 		return (ft_strnew(1));
-	return (ft_strsub(s, start, (size_t) (end - start + 1)));
+	return (ft_strsub(s, start, (size_t)(end - start + 1)));
 }
