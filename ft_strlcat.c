@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 17:16:21 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 22:00:32 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 19:41:39 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	len2;
 	size_t	len3;
 
-	if (dst == NULL || src == NULL || size == 0)
-		return (0);
 	i = 0;
 	len1 = 0;
 	len2 = ft_strlen(dst);

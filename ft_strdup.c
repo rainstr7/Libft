@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 15:43:26 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:54:47 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/17 19:04:36 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ char		*ft_strdup(const char *s)
 	int		i;
 
 	len = 0;
-	while (s[len] != '\0')
-		len++;
-	str = (char*)malloc(len + 1);
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof(char) *(len + 1));
+	if (!str)
+		return (NULL);
+	
 	i = len;
 	len = 0;
 	while (len < i)
