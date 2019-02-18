@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:47:15 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 13:50:13 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/18 21:18:22 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
-	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	if (s)
+		while (s[i] != '\0')
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
 }

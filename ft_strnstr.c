@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 15:20:45 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/18 21:02:34 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char		*ft_strnstr(const char *s1, const char *s2, size_t len)
 	str1 = (char *)s1;
 	str2 = (char *)s2;
 	len2 = ft_strlen(str2);
-	if (!str2)
+	if (*s2 == '\0')
 		return (str1);
 	else
 	{

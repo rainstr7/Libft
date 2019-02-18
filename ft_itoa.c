@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 14:27:41 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/18 21:45:01 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ char		*ft_itoa(int n)
 	int		num;
 	int		len;
 	char	*tmp;
-
+	if (!(tmp = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1))))
+		return (NULL);
 	num = n;
 	len = ft_nbrlen(n);
 	tmp = ft_strnew(len);

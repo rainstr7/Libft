@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:59:33 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:53:48 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/18 21:15:55 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	write(fd, str, ft_strlen(str));
+	if (str)
+		while(*str)
+		{
+			write(fd, str, 1);
+			str++;
+		}
 }

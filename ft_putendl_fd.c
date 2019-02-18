@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:00:40 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 13:40:02 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/18 21:35:59 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	if (s)
+	{
+		write(fd, s, ft_strlen(s));
+		write(fd, "\n", 1);
+	}
 }
