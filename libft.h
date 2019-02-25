@@ -6,16 +6,14 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 14:31:12 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 14:44:59 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:39:46 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
 # include <string.h>
-# include <stdlib.h>
 
 typedef struct		s_list
 {

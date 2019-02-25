@@ -6,11 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 19:39:51 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 13:21:27 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:46:30 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

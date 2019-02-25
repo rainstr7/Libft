@@ -6,11 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/18 21:45:01 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:54:02 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int			ft_nbrlen(int n)
 {

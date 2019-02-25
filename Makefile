@@ -6,12 +6,11 @@
 #    By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/09 18:07:06 by ihahn             #+#    #+#              #
-#    Updated: 2019/02/09 20:45:27 by ihahn            ###   ########.fr        #
+#    Updated: 2019/02/24 18:43:40 by ihahn            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-FLAGS = -Wall -Wextra -Werror -I. -c
 SRC = ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
@@ -71,17 +70,17 @@ SRC = ft_memset.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 
-all: $(NAME)
-		
+DEL = rm -f
+FLAGS = -Wall -Wextra -Werror
+OBJ = $(SRC:.c=.o)
+
 $(NAME):
-	gcc  $(FLAGS) -c $(SRC)
-	ar rc $(NAME) $(SRC:.c=.o)
+	gcc -c $(FLAGS) $(SRC)
+	ar rcs $(NAME) $(OBJ)
 	ranlib $(NAME)
-
+all: $(NAME)
 clean:
-	rm -f $(SRC:.c=.o)
-
+	@$(DEL) $(OBJ)
 fclean: clean
-	rm -f $(NAME)
-
+	@$(DEL) $(NAME)
 re: fclean all

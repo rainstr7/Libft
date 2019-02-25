@@ -6,34 +6,37 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/18 21:02:34 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:25:29 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int		i;
-	size_t	len2;
-	char	*str1;
-	char	*str2;
+	char	*little_start;
+	int		steps;
 
-	i = 0;
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	len2 = ft_strlen(str2);
-	if (*s2 == '\0')
-		return (str1);
-	else
+	if (*little == '\0')
+		return ((char *)big);
+	little_start = (char *)little;
+	steps = 0;
+	while (*big && (steps < (int)len))
 	{
-		while (((i + len2) <= len) && (*str1))
+		i = 0;
+		while (*big == *little && (steps < (int)len))
 		{
-			if (ft_memcmp(str1, str2, len2) == 0)
-				return (str1);
-			str1++;
+			if (*(little + 1) == '\0')
+				return ((char *)(big - i));
 			i++;
+			big++;
+			little++;
+			steps++;
 		}
+		big = big - i + 1;
+		little = little_start;
+		steps = steps - i + 1;
 	}
 	return (NULL);
 }

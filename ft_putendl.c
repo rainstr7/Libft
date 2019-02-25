@@ -6,11 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:48:56 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 22:02:15 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:57:32 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putendl(char const *s)
 {

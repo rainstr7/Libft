@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/27 20:36:19 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 21:55:23 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/25 21:02:02 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,28 @@ int		ft_atoi(const char *str)
 {
 	int n;
 	int i;
-	int isnegative;
+	int sign;
 
 	n = 0;
 	i = 0;
-	isnegative = 0;
+	sign = 1;
 	while ((str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v') ||
 		(str[i] == ' ') || (str[i] == '\f') || (str[i] == '\r'))
 		i++;
-	if (str[i] == '-')
-		isnegative = 1;
 	if (str[i] == '+' || str[i] == '-')
-		i++;
-	while ((str[i] >= '0') && (str[i] <= '9'))
-	{
-		n = 10 * n + (str[i] - '0');
+	{	
+		if (str[i] == '-')
+			sign = -1;
 		i++;
 	}
-	if (isnegative == 1)
-		return (-n);
-	return (n);
+	if ((str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v') ||
+		(str[i] == ' ') || (str[i] == '\f') || (str[i] == '\r') || (str[i] >= 0 && str[i] <= 31))
+			return (0);
+	while (str[i]) 
+		
+		if ((str[i] >= '0') && (str[i] <= '9'))
+			n = 10 * n + (str[i++] - '0');
+		else 
+			break;
+	return (n * sign);
 }

@@ -6,30 +6,32 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:07:49 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/18 21:58:32 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:42:14 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char		*ft_strmap(const char *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int		i;
 	int		len;
 	char	*str;
+	int		i;
 
-	if (s && f)
+	if (s == NULL || f == NULL)
+		return (NULL);
+	len = ft_strlen(s);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len && *s)
 	{
-		len = ft_strlen(s);
-		str = ft_memalloc(len);
-		i = 0;
-		while (i < len && s[i])
-		{
-			str[i] = f(s[i]);
-			i++;
-		}
-		str[i] = '\0';
-		return (str);
+		str[i] = f(*s);
+		s++;
+		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }

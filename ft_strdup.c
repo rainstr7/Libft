@@ -6,11 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 15:43:26 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 19:04:36 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/24 18:44:20 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char		*ft_strdup(const char *s)
 {
