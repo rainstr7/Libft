@@ -6,7 +6,7 @@
 #    By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/09 18:07:06 by ihahn             #+#    #+#              #
-#    Updated: 2019/02/24 18:43:40 by ihahn            ###   ########.fr        #
+#    Updated: 2019/02/27 21:27:15 by ihahn            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRC = ft_memset.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strmapi.c \
-		ft_strmapi.c \
+		ft_strmap.c \
 		ft_strequ.c \
 		ft_strnequ.c \
 		ft_strsub.c \
@@ -65,7 +65,7 @@ SRC = ft_memset.c \
 		ft_putnbr_fd.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
-		ft_lstdelone.c \
+		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
@@ -77,7 +77,6 @@ OBJ = $(SRC:.c=.o)
 $(NAME):
 	gcc -c $(FLAGS) $(SRC)
 	ar rcs $(NAME) $(OBJ)
-	ranlib $(NAME)
 all: $(NAME)
 clean:
 	@$(DEL) $(OBJ)

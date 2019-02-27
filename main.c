@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.1.c                                     :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 18:42:28 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 18:46:26 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/27 21:16:40 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+/*void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*dst1;
 	unsigned char	*src1;
@@ -28,7 +28,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return (dst1);
 	}
 	return (0);
-}
+}*/
 
 int main(void)
 {	

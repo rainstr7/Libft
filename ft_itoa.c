@@ -6,18 +6,18 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/24 18:54:02 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/27 21:20:52 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int			ft_nbrlen(int n)
+static int	ft_nbrlen(int n)
 {
 	int		num;
 	int		i;
-	
+
 	i = 0;
 	num = n;
 	if (n == 0)
@@ -35,6 +35,7 @@ char		*ft_itoa(int n)
 	int		num;
 	int		len;
 	char	*tmp;
+
 	if (!(tmp = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1))))
 		return (NULL);
 	num = n;

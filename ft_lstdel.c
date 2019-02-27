@@ -6,11 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:38:43 by ihahn             #+#    #+#             */
-/*   Updated: 2019/01/20 22:02:55 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/02/27 21:14:33 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
