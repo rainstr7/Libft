@@ -6,7 +6,7 @@
 #    By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/09 18:07:06 by ihahn             #+#    #+#              #
-#    Updated: 2019/02/27 21:27:15 by ihahn            ###   ########.fr        #
+#    Updated: 2019/03/04 17:02:39 by ihahn            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,8 @@ SRC = ft_memset.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
+		ft_strlenn.c \
+		ft_nbrlen.c \
 
 DEL = rm -f
 FLAGS = -Wall -Wextra -Werror

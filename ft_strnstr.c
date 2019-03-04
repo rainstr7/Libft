@@ -6,37 +6,37 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/24 18:25:29 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 16:50:47 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *dst, const char *src, size_t len)
 {
 	int		i;
-	char	*little_start;
-	int		steps;
+	char	*begin;
+	int		len_str;
 
-	if (*little == '\0')
-		return ((char *)big);
-	little_start = (char *)little;
-	steps = 0;
-	while (*big && (steps < (int)len))
+	if (*src == '\0')
+		return ((char *)dst);
+	begin = (char *)src;
+	len_str = 0;
+	while (*dst && (len_str < (int)len))
 	{
 		i = 0;
-		while (*big == *little && (steps < (int)len))
+		while (*dst == *src && (len_str < (int)len))
 		{
-			if (*(little + 1) == '\0')
-				return ((char *)(big - i));
+			if (*(src + 1) == '\0')
+				return ((char *)(dst - i));
+			src++;
+			len_str++;
 			i++;
-			big++;
-			little++;
-			steps++;
+			dst++;
 		}
-		big = big - i + 1;
-		little = little_start;
-		steps = steps - i + 1;
+		dst = dst - i + 1;
+		src = begin;
+		len_str = len_str - i + 1;
 	}
 	return (NULL);
 }

@@ -6,30 +6,12 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:03 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/25 21:12:07 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 17:18:07 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-static int		cal_length(char const *s, char c)
-{
-	int i;
-	int count;
-
-	i = 0;
-	count = 0;
-	while (s[i])
-	{
-		if (i == 0 && s[i] != c)
-			count++;
-		else if (s[i] != c && s[i - 1] == c)
-			count++;
-		i++;
-	}
-	return (count);
-}
 
 static char		*ft_print_word(int start, char const *str, char c)
 {
@@ -63,7 +45,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (!(s && c))
 		return (NULL);
-	arr = (char **)malloc(sizeof(char*) * (cal_length(s, c) + 1));
+	arr = (char **)malloc(sizeof(char*) * (ft_strlenn(s, c) + 1));
 	if (!arr)
 		return (NULL);
 	i = 0;

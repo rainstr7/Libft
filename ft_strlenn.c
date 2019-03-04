@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strlenn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/03/04 17:14:28 by ihahn            ###   ########.fr       */
+/*   Created: 2019/03/04 16:27:03 by ihahn             #+#    #+#             */
+/*   Updated: 2019/03/04 17:20:00 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char		*ft_itoa(int n)
+int		ft_strlenn(char const *s, char c)
 {
-	int		num;
-	int		len;
-	char	*tmp;
+	int i;
+	int len;
 
-	tmp = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1));
-	if (!tmp)
-		return (NULL);
-	len = ft_nbrlen(n);
-	tmp = ft_strnew(len);
-	num = n;
-	while (len--)
+	i = 0;
+	len = 0;
+	while (s[i])
 	{
-		tmp[len] = (n < 0) ? (n % 10) * -1 + '0' : (n % 10) + '0';
-		n /= 10;
+		if (i == 0 && s[i] != c)
+			len++;
+		else if (s[i] != c && s[i - 1] == c)
+			len++;
+		i++;
 	}
-	if (num < 0)
-		tmp[0] = '-';
-	return (tmp);
+	return (len);
 }
