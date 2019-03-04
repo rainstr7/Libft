@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:03:33 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 13:43:37 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 13:16:02 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
+		ft_putchar_fd(n % 10 + 48, fd);
 	}
 	else
-		ft_putchar_fd(n + '0', fd);
+		ft_putchar_fd(n + 48, fd);
 }

@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 20:44:31 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/27 21:20:52 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 11:21:27 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_nbrlen(int n)
 
 	i = 0;
 	num = n;
-	if (n == 0)
+	if (num == 0)
 		return (1);
 	while (num)
 	{
@@ -36,14 +36,15 @@ char		*ft_itoa(int n)
 	int		len;
 	char	*tmp;
 
-	if (!(tmp = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1))))
+	tmp = (char *)malloc(sizeof(char) * (ft_nbrlen(n) + 1));
+	if (!tmp)
 		return (NULL);
-	num = n;
 	len = ft_nbrlen(n);
 	tmp = ft_strnew(len);
+	num = n;
 	while (len--)
 	{
-		tmp[len] = (n < 0) ? (n % 10) * -1 + 48 : (n % 10) + 48;
+		tmp[len] = (n < 0) ? (n % 10) * -1 + '0' : (n % 10) + '0';
 		n /= 10;
 	}
 	if (num < 0)

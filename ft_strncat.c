@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 16:50:10 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/27 21:28:44 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 10:49:37 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char				*ft_strncat(char *s1, const char *s2, size_t n)
 	len = 0;
 	i = 0;
 	len = ft_strlen(s1);
-
 	while ((s2[i] != '\0') && (n--))
 	{
 		s1[len] = s2[i];

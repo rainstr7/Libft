@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:43:40 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 20:36:50 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 12:23:58 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,28 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*fresh;
-	t_list	*fresh_start;
-	t_list	*prev;
+	t_list	*list;
+	t_list	*list_start;
+	t_list	*rev;
 
 	if (lst)
 	{
-		fresh = ft_lstnew(lst->content, lst->content_size);
-		fresh = f(fresh);
-		if (fresh)
-			fresh_start = fresh;
+		list = ft_lstnew(lst->content, lst->content_size);
+		list = f(list);
+		if (list)
+			list_start = list;
 		else
 			return (NULL);
-		prev = fresh;
+		rev = list;
 		lst = lst->next;
 	}
 	while (lst)
 	{
-		fresh = ft_lstnew(lst->content, lst->content_size);
-		fresh = f(fresh);
-		prev->next = fresh;
-		prev = prev->next;
+		list = ft_lstnew(lst->content, lst->content_size);
+		list = f(list);
+		rev->next = list;
+		rev = rev->next;
 		lst = lst->next;
 	}
-	return (fresh_start);
+	return (list_start);
 }

@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/21 15:43:26 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/24 18:44:20 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 10:46:50 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ char		*ft_strdup(const char *s)
 
 	len = 0;
 	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) *(len + 1));
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	
 	i = len;
 	len = 0;
 	while (len < i)

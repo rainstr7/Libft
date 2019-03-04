@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/20 21:38:43 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/27 21:14:33 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 11:21:31 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list	*lst;
-	t_list	*nxtlst;
+	t_list	*list;
+	t_list	*nxtlist;
 
-	lst = *alst;
-	while (lst)
+	list = *alst;
+	while (list)
 	{
-		nxtlst = lst->next;
-		del(lst->content, lst->content_size);
-		free(lst);
-		lst = nxtlst;
+		nxtlist = list->next;
+		del(list->content, list->content_size);
+		free(list);
+		list = nxtlist;
 	}
 	*alst = NULL;
 }

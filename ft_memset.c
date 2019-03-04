@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 14:48:15 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/27 21:58:57 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/04 11:50:09 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char	*ptr;
+	char	*p;
 	size_t	i;
 
-	ptr = b;
+	p = b;
 	i = 0;
 	while (i < len)
-		*(ptr + i++) = c;
+	{
+		*(p + i) = c;
+		i++;
+	}
 	return (b);
 }
