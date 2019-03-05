@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 14:31:12 by ihahn             #+#    #+#             */
-/*   Updated: 2019/03/04 17:05:24 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/05 17:27:19 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strncpy(char *dst, char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
@@ -82,5 +82,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_strlenn(char const *s, char c);
 int					ft_nbrlen(int n);
+int					ft_isspace(int n);
 
 #endif
