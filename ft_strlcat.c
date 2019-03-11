@@ -6,7 +6,7 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 17:16:21 by ihahn             #+#    #+#             */
-/*   Updated: 2019/02/17 19:41:39 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/06 15:50:57 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[len1 + i] = '\0';
-	return (len1 + ft_strlen(src));
+	return (len1 + len3);
 }

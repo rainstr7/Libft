@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_delarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/20 21:00:40 by ihahn             #+#    #+#             */
-/*   Updated: 2019/03/07 10:31:29 by ihahn            ###   ########.fr       */
+/*   Created: 2019/03/07 17:43:44 by ihahn             #+#    #+#             */
+/*   Updated: 2019/03/07 17:55:17 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+char	**ft_delarray(char ***arr, int len)
 {
-	if (s)
-	{
-		write(fd, s, ft_strlen(s));
-		write(fd, "\n", 1);
-	}
+	int		i;
+
+	i = 0;
+	while (i < len)
+		free(arr[i]);
+	free(arr);
+	return (NULL);
 }

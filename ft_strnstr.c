@@ -6,36 +6,36 @@
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/19 17:33:44 by ihahn             #+#    #+#             */
-/*   Updated: 2019/03/04 16:50:47 by ihahn            ###   ########.fr       */
+/*   Updated: 2019/03/11 16:31:03 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *dst, const char *src, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int		i;
 	char	*begin;
 	int		len_str;
 
-	if (*src == '\0')
-		return ((char *)dst);
-	begin = (char *)src;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	begin = (char *)needle;
 	len_str = 0;
-	while (*dst && (len_str < (int)len))
+	while (*haystack && (len_str < (int)len))
 	{
 		i = 0;
-		while (*dst == *src && (len_str < (int)len))
+		while (*haystack == *needle && (len_str < (int)len))
 		{
-			if (*(src + 1) == '\0')
-				return ((char *)(dst - i));
-			src++;
+			if (*(needle + 1) == '\0')
+				return ((char *)(haystack - i));
+			needle++;
 			len_str++;
 			i++;
-			dst++;
+			haystack++;
 		}
-		dst = dst - i + 1;
-		src = begin;
+		haystack = haystack - i + 1;
+		needle = begin;
 		len_str = len_str - i + 1;
 	}
 	return (NULL);

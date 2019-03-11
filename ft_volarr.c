@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_volarr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ihahn <ihahn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/20 21:00:40 by ihahn             #+#    #+#             */
-/*   Updated: 2019/03/07 10:31:29 by ihahn            ###   ########.fr       */
+/*   Created: 2019/03/04 16:27:03 by ihahn             #+#    #+#             */
+/*   Updated: 2019/03/07 16:39:10 by ihahn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+int		ft_volarr(char const *s, char c)
 {
-	if (s)
+	int i;
+	int len;
+
+	i = 0;
+	len = 0;
+	while (s[i])
 	{
-		write(fd, s, ft_strlen(s));
-		write(fd, "\n", 1);
+		if (i == 0 && s[i] != c)
+			len++;
+		else if (s[i] != c && s[i - 1] == c)
+			len++;
+		i++;
 	}
+	return (len);
 }
